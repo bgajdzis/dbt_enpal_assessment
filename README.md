@@ -13,3 +13,4 @@
 5. Connect to the db via a preferred tool.
 6. Install `dbt-core`, `dbt-postgres`, `sqlfluff`, and `sqlfluff-templater-dbt` using pip (if you don’t have) on your preferred environment, using the most recent version of python.
 7. Now you can run `dbt seed` to populate the static lookup tables and `dbt run` to build the project.
+8. You can run `dbt test` to check the integrity of the data under the assumed constraints` and `dbt docs generate && dbt docs serve` to see the documentation of the project.
