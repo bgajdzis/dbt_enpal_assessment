@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_users
+    description: "Information about users and their personal data"
+    columns:
+      - name: id
+        data_type: integer
+        description: "Unique ID of the user"
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        data_type: character varying
+        description: "The first and last name of the user"
+        tests:
+          - not_null
+
+      - name: email
+        data_type: character varying
+        description: "The email address of the user"
+        tests:
+          - not_null
+
+      - name: modified
+        data_type: timestamp without time zone
+        description: "When was the user's data most recently modified"

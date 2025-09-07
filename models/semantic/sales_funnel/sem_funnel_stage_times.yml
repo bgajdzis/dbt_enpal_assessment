@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: sem_funnel_stage_times
+    description: "Shows the transition times into and out of each recorded sales funnel stage, as well as select activities, for all deals. Note that if the deal reentered the funnel, all the steps are shown."
+    columns:
+      - name: deal_id
+        data_type: integer
+        description: "Unique ID of the deal"
+
+      - name: stage_id
+        data_type: numeric
+        description: "Ordinal of the sales funnel stage or activity"
+
+      - name: stage_entered
+        data_type: timestamp without time zone
+        description: "Date and time at which the deal moved into the stage"
+
+      - name: stage_exited
+        data_type: timestamp without time zone
+        description: "Date and time at which the deal moved out of the stage or was lost"

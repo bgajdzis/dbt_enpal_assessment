@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: sem_deal_transition_latest_timestamps
+    description: "Pivot table showing the transition times to each sales fnnel stage for all deals. Note that if the deal re-entered the funnel, only the most recent stage transitions are shown"
+    columns:
+      - name: deal_id
+        data_type: integer
+        description: "Unique ID of the deal"
+
+      - name: lead_generation
+        data_type: timestamp without time zone
+        description: "When was the lead generated"
+
+      - name: to_qualified_lead
+        data_type: timestamp without time zone
+        description: "When did the deal transition to qualified lead stage"
+
+      - name: to_assessment
+        data_type: timestamp without time zone
+        description: "When did the deal transition to assessment stage"
+
+      - name: to_quote_preparation
+        data_type: timestamp without time zone
+        description: "When did the deal transition to quote preparation stage"
+
+      - name: to_negotiation
+        data_type: timestamp without time zone
+        description: "When did the deal transition to negotiation stage"
+
+      - name: to_closing
+        data_type: timestamp without time zone
+        description: "When did the deal transition to closing stage"
+
+      - name: to_onboarding
+        data_type: timestamp without time zone
+        description: "When did the deal transition to onboarding stage"
+
+      - name: to_follow_up
+        data_type: timestamp without time zone
+        description: "When did the deal transition to followup stage"
+
+      - name: to_renewal
+        data_type: timestamp without time zone
+        description: "When did the deal transition to renewal stage"

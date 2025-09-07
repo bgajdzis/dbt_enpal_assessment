@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: rep_sales_funnel_monthly
+    description: "Reporting model -- shows the number of deals in each step of the funnel on a monthly granularity from the start of 2024"
+    columns:
+      - name: month
+        data_type: date
+        description: "Reporting year and month"
+
+      - name: kpi_name
+        data_type: text
+        description: "The name of the sales funnel step"
+
+      - name: funnel_step
+        data_type: numeric
+        description: "The ordinal of the sales funnel step"
+
+      - name: deals_count
+        data_type: bigint
+        description: "Number of deals which were in this step for at least a part of the reporting period"

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_fields_lost_reason
+    description: "Information about the deal loss reasons and their mapping"
+    columns:
+      - name: field_key
+        data_type: text
+        description: "constant - lost_reason"
+
+      - name: field_name
+        data_type: text
+        description: "constant - Lost reason"
+
+      - name: label_id
+        data_type: integer
+        description: "Index of the label of the deal loss"
+
+      - name: label_name
+        data_type: text
+        description: "The name of the deal loss reason"

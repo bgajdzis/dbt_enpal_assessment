@@ -35,4 +35,4 @@ capitalisation_policy = upper
 capitalisation_policy = upper
 
 [sqlfluff:rules:ambiguous.column_references]  # Number in group by
-group_by_and_order_by_style = implicit
+group_by_and_order_by_style = consistent

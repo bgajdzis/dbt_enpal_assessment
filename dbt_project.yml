@@ -18,12 +18,28 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+# directories to be removed by `dbt clean`
+clean-targets:
   - "target"
   - "dbt_packages"
 
 models:
   enpal_assessment_project:
-    # Config indicated by + and applies to all files under models/example/
-    +schema: pipedrive_analytics
     +materialized: table
+    +schema: pipedrive_analytics
+    staging:
+      dimensions:
+        +materialized: view
+        +schema: pipedrive_analytics_dimensions
+      facts:
+        +schema: pipedrive_analytics_facts
+    semantic:
+      sales_funnel:
+        +schema: pipedrive_analytics_semantic_sales_funnel
+      users:
+        +schema: pipedrive_analytics_semantic_sales_users
+    reporting:
+
+
+      
+

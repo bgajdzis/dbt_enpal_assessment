@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_activity
+    description: "Information about the logged activities and their states"
+    columns:
+      - name: activity_id
+        data_type: integer
+        description: "Unique ID of the activity"
+        tests:
+          - unique
+          - not_null
+
+      - name: type
+        data_type: character varying
+        description: "Type of the activity -- compare to the dims_activity_types table"
+
+      - name: assigned_to_user
+        data_type: integer
+        description: "ID of the user who owns the deal"
+        tests:
+          - not_null
+
+      - name: deal_id
+        data_type: integer
+        description: "Unique ID of the deal"
+        tests:
+          - not_null
+
+      - name: done
+        data_type: boolean
+        description: "Is the activity completed"
+
+      - name: due_to
+        data_type: timestamp without time zone
+        description: "By which date is the activity due"

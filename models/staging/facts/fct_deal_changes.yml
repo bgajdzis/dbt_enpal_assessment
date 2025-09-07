@@ -1,0 +1,27 @@
+version: 2
+
+models:
+- name: fct_deal_changes
+  description: "Change Data Capture stream of modifications the the Deal objects"
+  columns:
+    - name: deal_id
+      data_type: integer
+      description: "Unique ID of the deal"
+      tests:
+        - not_null
+
+    - name: change_time
+      data_type: timestamp without time zone
+      description: "The time of the change"
+      tests:
+        - not_null
+
+    - name: changed_field_key
+      data_type: character varying
+      description: "Label of the changed field"
+      tests:
+        - not_null
+
+    - name: new_value
+      data_type: character varying
+      description: "New value set on the changed field -- compare with dim_fields_lost_reason and dim_fields_stage"

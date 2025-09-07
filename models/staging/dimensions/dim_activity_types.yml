@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_activity_types
+    description: "Information about the activity types and their mapping"
+    columns:
+      - name: id
+        data_type: integer
+        description: "Index of the activity type"
+
+      - name: name
+        data_type: character varying
+        description: "Name of the activity type"
+
+      - name: active
+        data_type: character varying
+        description: "Is the activity enabled in the system?"
+
+      - name: type
+        data_type: character varying
+        description: "Label of the activity type in the API"

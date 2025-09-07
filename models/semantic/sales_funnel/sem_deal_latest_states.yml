@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: sem_deal_latest_states
+    description: "Compacted data from the CDC table -- latest state of each deal"
+    columns:
+      - name: deal_id
+        data_type: integer
+        description: "Unique ID of the deal"
+
+      - name: latest_stage
+        data_type: text
+        description: "The stage at which the deal was most recently"
+
+      - name: stage_transition_timestamp
+        data_type: timestamp without time zone
+        description: "The time and date at which the deal entered its most recent stage"
+
+      - name: is_deal_lost
+        data_type: boolean
+        description: "Is the deal lost"
+
+      - name: deal_loss_timestamp
+        data_type: timestamp without time zone
+        description: "If the deal is lost -- the time and date at which the loss was recorded"
+
+      - name: loss_reason
+        data_type: text
+        description: "If the deal is lost -- the reason for the loss"

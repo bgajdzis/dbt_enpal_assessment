@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_fields_stage
+    description: "Information about the stage names and their mapping"
+    columns:
+      - name: field_key
+        data_type: text
+        description: "constant - stage_id"
+
+      - name: field_name
+        data_type: text
+        description: "constant - Stage"
+
+      - name: label_id
+        data_type: integer
+        description: "Index of the label of stage"
+
+      - name: label_name
+        data_type: text
+        description: "The name of the stage"
