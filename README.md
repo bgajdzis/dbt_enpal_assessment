@@ -11,6 +11,7 @@
     Port: 5432 
 ```
 5. Connect to the db via a preferred tool.
-6. Install `dbt-core`, `dbt-postgres`, `sqlfluff`, and `sqlfluff-templater-dbt` using pip (if you don’t have) on your preferred environment, using the most recent version of python.
+6. Install `dbt-core`, `dbt-postgres`, `sqlfluff`, and `sqlfluff-templater-dbt` using pip (if you don’t have) on your preferred environment, using the most recent version of python. Alternatively use the requirements file. Then run `dbt deps` to set up DBT package dependencies.
 7. Now you can run `dbt seed` to populate the static lookup tables and `dbt run` to build the project.
-8. You can run `dbt test` to check the integrity of the data under the assumed constraints` and `dbt docs generate && dbt docs serve` to see the documentation of the project.
+8. You can run `dbt test` to check the integrity of the data under the assumed constraints. **NB that there is one failing test**, due to what I believe to be data error -- if this situation came up in a real-life scenario I would start by escalating the issue to the publishers of the data, ie the the CRM team in this case.
+9. You can run `dbt docs generate && dbt docs serve` to see the documentation of the project.
